@@ -1,6 +1,6 @@
 # Slider
 
-##HTML
+## HTML
 ```html
 <div class="standart_slider">
     <a href="#" class="arrows"><i class="fas fa-chevron-left"></i></a>
