@@ -30,7 +30,7 @@ function getMinWidth(arr) {
         min = min ? (min < width ? min : width) : width;
     }
 
-    return min;
+    return min ? min : 200;
 }
 
 // Returns the number of slides that fit in the scope.
@@ -63,7 +63,7 @@ function getWidthSlides(width, amount) {
 let time = 0;
 let obj = getArrAllSlides(); // Object for storing slides and their order values.
 let width = $(`.slider`).offsetWidth; // Visibility width.
-let min_width = getMinWidth(obj) ? getMinWidth(obj) : 200;
+let min_width = getMinWidth(obj);
 let slides_amount = getAmoutSlides(width, min_width);
 
 getWidthSlides(width, slides_amount);
