@@ -85,3 +85,35 @@
   object-fit: contain;
 }
 ```
+### JavaScript
+Функция для расчета количества сладов, которое вмещается в ширину слайдера.
+>Т.е. относительно ширины блока ```<div class='slides'>...</>```.
+```javascript
+function getAmoutSlides(width, min_width) {
+    let amount = 0;
+    let total_length = 0;
+
+    while (total_length < width) {
+        total_length += +min_width;
+
+        if (total_length < width) {
+            width -= 32;
+            amount++;
+        }
+    }
+
+    return amount;
+}
+```
+Функция для расчета ширины слайдов, с учетом их отступов, и присваивание этого значения слайдам.
+```javascript
+function getWidthSlides(width, amount) {
+    let indents = 32 * (amount - 1);
+    let slide = ( (width - indents) / amount ).toFixed(1) ;
+
+    for (let e of slides) e.style.width = `${slide}px`; 
+
+    $(`.slides`).style.transform = `translateX(-${+slide + 32}px)`;
+}
+```
+
