@@ -1,6 +1,6 @@
 # Slider
 
-### HTML
+## HTML
 ```html
 <div class="standart_slider">
     <a href="#" class="arrows"><i class="fas fa-chevron-left"></i></a>
@@ -35,7 +35,7 @@
     <a href="#" class="arrows"><i class="fas fa-chevron-right"></i></a>
 </div>
 ```
-### CSS
+## CSS
 ```css
 .standart_slider, 
 .standart_slider .slider, 
@@ -85,7 +85,7 @@
   object-fit: contain;
 }
 ```
-### JavaScript
+## JavaScript
 Функция для расчета количества сладов, которое вмещается в ширину слайдера.
 >Т.е. относительно ширины блока ```<div class='slides'>...</>```.
 ```javascript
@@ -105,7 +105,7 @@ function getAmoutSlides(width, min_width) {
     return amount;
 }
 ```
-Функция для расчета ширины слайдов, с учетом их отступов, и присваивание этого значения слайдам.
+Функция для расчета ширины слайдов, с учетом их отступов, и присваивание этого значения.
 ```javascript
 function getWidthSlides(width, amount) {
     let indents = 32 * (amount - 1);
