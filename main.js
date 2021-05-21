@@ -63,7 +63,7 @@ function getWidthSlides(width, amount) {
 let time = 0;
 let obj = getArrAllSlides(); // Object for storing slides and their order values.
 let width = $(`.slider`).offsetWidth; // Visibility width.
-let min_width = getMinWidth(obj);
+let min_width = getMinWidth(obj) ? getMinWidth(obj) : 200;
 let slides_amount = getAmoutSlides(width, min_width);
 
 getWidthSlides(width, slides_amount);
