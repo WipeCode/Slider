@@ -7,7 +7,7 @@
     <div class="slider">
         <div class="slides">
             <div class="slide">
-                <img src="img/l1.png" width="200" alt="">
+                <img src="..." width="..." alt="...">
             </div>
             ...
         </div>
